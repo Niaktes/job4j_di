@@ -19,7 +19,8 @@ public class Context {
         List<Object> args = new ArrayList<>();
         for (Class arg : con.getParameterTypes()) {
             if (!els.containsKey(arg.getCanonicalName())) {
-                throw new IllegalStateException("Object doesn't found in context : " + arg.getCanonicalName());
+                throw new IllegalStateException("Object doesn't found in context : "
+                        + arg.getCanonicalName());
             }
             args.add(els.get(arg.getCanonicalName()));
         }

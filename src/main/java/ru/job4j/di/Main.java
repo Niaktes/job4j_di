@@ -5,12 +5,13 @@ public class Main {
     public static void main(String[] args) {
         Context context = new Context();
         context.reg(Store.class);
+        context.reg(ConsoleInput.class);
         context.reg(StartUI.class);
 
         StartUI ui = context.get(StartUI.class);
 
-        ui.add("Petr Arsentev");
-        ui.add("Sergei Zakharenko");
+        ui.addAnswer("Who is creator of this awesome course?");
+        ui.addAnswer("And what is your name, student?");
         ui.print();
     }
 

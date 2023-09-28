@@ -9,9 +9,10 @@ public class SpringDI {
         context.scan("ru.job4j.di");
         context.refresh();
         StartUI ui = context.getBean(StartUI.class);
+        StartUI another = context.getBean(StartUI.class);
         ui.addAnswer("Who is creator of this awesome course?");
         ui.addAnswer("And what is your name, student?");
-        ui.print();
+        another.print();
     }
 
 }
